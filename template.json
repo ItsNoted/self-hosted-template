@@ -124,7 +124,7 @@
 			"platform": "linux",
 			"restart_policy": "unless-stopped",
 			"ports": [
-				"5001:5000/tcp"
+				"5001/tcp"
 			],
 			"title": "Whoogle Search",
 			"type": 1,
