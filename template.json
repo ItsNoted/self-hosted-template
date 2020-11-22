@@ -41,6 +41,38 @@
 		},
 		{
 			"category": [
+				"Tools",
+				"Computer Vision"
+			],
+			"description": "This container sets up a Deepstack API built-in engines for computer vision, such as face and object identification. \r\n The Web GUI and the API runs both at TCP 5000 port, with no usage of AVX CPU instructions. \r\n Set only one flag to True, VISION-FACE for face recognition and VISION-DETECTION for objects. ",
+			"env": [
+				{
+					"label": "VISION-FACE",
+					"name": "VISION-FACE",
+					"set": "False"
+				},
+				{
+					"label": "VISION-DETECTION",
+					"name": "VISION-DETECTION",
+					"set": "False"
+				},
+			],
+			"image": "deepquestai/deepstack:noavx",
+			"logo": "https://deepstack.cc/static/img/deepstacklogo.png",
+			"platform": "linux",
+			"ports": [
+				"5000/tcp"
+			],
+			"title": "Deepstack.cc",
+			"type": 1,
+			"volumes": [
+				{
+					"localstorage": "/datastore"
+				}
+			]
+		},
+		{
+			"category": [
 				"Downloaders",
 				"Tools"
 			],
