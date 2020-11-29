@@ -41,6 +41,38 @@
 		},
 		{
 			"category": [
+				"Tools",
+				"Computer Vision"
+			],
+			"description": "This container sets up a Deepstack API built-in engines for computer vision, such as face and object identification. \r\n The Web GUI and the API runs both at TCP 5000 port, with no usage of AVX CPU instructions. \r\n Set only one flag to True, VISION-FACE for face recognition and VISION-DETECTION for objects. ",
+			"env": [
+				{
+					"label": "VISION-FACE",
+					"name": "VISION-FACE",
+					"set": "False"
+				},
+				{
+					"label": "VISION-DETECTION",
+					"name": "VISION-DETECTION",
+					"set": "False"
+				},
+			],
+			"image": "deepquestai/deepstack:noavx",
+			"logo": "https://deepstack.cc/static/img/deepstacklogo.png",
+			"platform": "linux",
+			"ports": [
+				"5000/tcp"
+			],
+			"title": "Deepstack.cc",
+			"type": 1,
+			"volumes": [
+				{
+					"localstorage": "/datastore"
+				}
+			]
+		},
+		{
+			"category": [
 				"Downloaders",
 				"Tools"
 			],
@@ -79,6 +111,30 @@
 				}
 			]
 		},
+                {
+			"category": [
+				"Tools",
+				"Web"
+			],
+			"description": "Get Google search results, but without any ads, javascript, AMP links, cookies, or IP address tracking. \r\n Easily deployable in one click as a Docker app, and customizable with a single config file. \r\n Quick and simple to implement as a primary search engine replacement on both desktop and mobile.",
+			"env": [
+			],
+			"image": "benbusby/whoogle-search:latest",
+			"logo": "https://repository-images.githubusercontent.com/235434204/e21a5c80-0197-11eb-8e97-81a54bf49c2d",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"ports": [
+				"5001/tcp"
+			],
+			"title": "Whoogle Search",
+			"type": 1,
+			"volumes": [
+				{
+                  "container": "/config",
+                  "bind": "/srv/dev-disk-by-label-media/Files/AppData/Config/Whoogle"
+                }
+			]
+		},		
 		{
 			"category": [
 				"Books",
